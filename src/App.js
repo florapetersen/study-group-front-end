@@ -19,9 +19,17 @@ function App() {
             exact
             to="/"
             >
+              Home
+          </NavLink>
+          <NavLink
+            className="inline-block px-4 py-2"
+            activeClassName="text-yellow-300"
+            exact
+            to="/courses"
+            >
               Courses
-            </NavLink>
-            <NavLink
+          </NavLink>
+          <NavLink
             className="inline-block px-4 py-2"
             activeClassName="text-yellow-300"
             exact
@@ -31,7 +39,7 @@ function App() {
           </NavLink>
         </nav>
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/course">
             <CoursesIndexContainer />
           </Route>
           <Route path="courses/new">
