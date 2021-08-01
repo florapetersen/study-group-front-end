@@ -32,9 +32,11 @@ function App() {
         </nav>
         <Switch>
           <Route exact path="/">
-            Courses
+            <CoursesIndexContainer />
           </Route>
-          <Route path="courses/new">New Course</Route>
+          <Route path="courses/new">
+            <CourseFormContainer />
+          </Route>
         </Switch>
       </Router>
       <header className="App-header">
