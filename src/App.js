@@ -11,6 +11,14 @@ import CoursesIndexContainer from './containers/CoursesIndexContainer'
 function App() {
   return (
     <div className="App">
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            Courses
+          </Route>
+          <Route path="courses/new">New Course</Route>
+        </Switch>
+      </Router>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
