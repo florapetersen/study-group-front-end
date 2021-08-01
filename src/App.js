@@ -5,6 +5,8 @@ import {
   Route,
   NavLink,
 } from 'react-router-dom'
+import CourseFormContainer from './containers/CourseFormContainer'
+import CoursesIndexContainer from './containers/CoursesIndexContainer'
 
 function App() {
   return (
