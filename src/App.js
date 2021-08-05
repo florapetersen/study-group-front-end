@@ -40,7 +40,7 @@ function App() {
           </NavLink>
         </nav>
         <Switch>
-          <Route exact path="/course">
+          <Route exact path="/courses">
             <CoursesIndexContainer />
           </Route>
           <Route path="/courses/new" component={CourseFormContainer} />
