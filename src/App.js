@@ -44,6 +44,7 @@ function App() {
             <CoursesIndexContainer />
           </Route>
           <Route path="/courses/new" component={CourseFormContainer} />
+          <Route path-="/courses/:courseId/notes/new" component={NewNoteContainer} />
         </Switch>
       </Router>
       <header className="App-header">
