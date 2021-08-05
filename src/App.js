@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom'
 import CourseFormContainer from './containers/CourseFormContainer'
 import CoursesIndexContainer from './containers/CoursesIndexContainer'
+import NewNoteContainer from './containers/NewNoteContainer'
 
 function App() {
   return (
