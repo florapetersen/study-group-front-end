@@ -8,6 +8,7 @@ import {
 import CourseFormContainer from './containers/CourseFormContainer'
 import CoursesIndexContainer from './containers/CoursesIndexContainer'
 import NewNoteContainer from './containers/NewNoteContainer'
+import CourseShowContainer from './containers/CourseShowContainer'
 
 function App() {
   return (
@@ -44,7 +45,8 @@ function App() {
             <CoursesIndexContainer />
           </Route>
           <Route path="/courses/new" component={CourseFormContainer} />
-          <Route path-="/courses/:courseId/notes/new" component={NewNoteContainer} />
+          <Route path="/courses/:courseId/notes/new" component={NewNoteContainer} />
+          <Route path="/courses/:courseId" component={CourseShowContainer} />
         </Switch>
       </Router>
       <header className="App-header">
