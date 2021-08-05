@@ -42,9 +42,7 @@ function App() {
           <Route exact path="/course">
             <CoursesIndexContainer />
           </Route>
-          <Route path="/courses/new">
-            <CourseFormContainer />
-          </Route>
+          <Route path="/courses/new" component={CourseFormContainer} />
         </Switch>
       </Router>
       <header className="App-header">
