@@ -8,15 +8,21 @@ export default class CoursesIndexContainer extends Component {
   }
 
   componentDidMount() {
-      setTimeout(() => {
-          this.setState({
-              courses: [
-                  { name: 'Biology' },
-                  { name: 'Chemistry' },
-              ],
-              loading: false,
-          })
-      }, 1000)
+      fetch('https://localhost:3001/courses', {
+          method: 'get',
+          headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+          }
+      })
+        .then(res => res.json())
+        .then(coursesJson => {
+            console.log('courses', coursesJson)
+            this.setState({
+                courses: coursesJson,
+                loading: false
+            })
+        })
   }
 
   render() {
