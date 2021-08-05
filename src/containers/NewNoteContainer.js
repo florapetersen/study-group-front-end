@@ -1,6 +1,24 @@
 import React, { Component } from 'react'
 
 export default class NewNoteContainer extends Component {
+
+    handleSubmit = (e) => {
+        e.preventDefault()
+        const form = e.target
+        const body = new FormData()
+        body.append('note[title]', form.title.value)
+        body.append('note[content]', form.content.value)
+
+        fetch('http://localhost:3000/notes', {
+            method: 'post',
+            body,
+        })
+        .then((res) => res.json())
+        .then((noteJson) => {
+            console.log(noteJson)
+        })
+    }
+    
   render() {
     return (
         <form
