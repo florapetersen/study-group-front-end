@@ -8,6 +8,7 @@ export default class NewNoteContainer extends Component {
         const body = new FormData()
         body.append('note[title]', form.title.value)
         body.append('note[content]', form.content.value)
+        body.append('note[course_id]', this.props.match.params.courseId)
 
         fetch('http://localhost:3000/notes', {
             method: 'post',
@@ -18,7 +19,7 @@ export default class NewNoteContainer extends Component {
             console.log(noteJson)
         })
     }
-    
+
   render() {
     return (
         <form
