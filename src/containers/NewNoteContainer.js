@@ -16,7 +16,7 @@ export default class NewNoteContainer extends Component {
         })
         .then((res) => res.json())
         .then((noteJson) => {
-            console.log(noteJson)
+            this.props.history.push(`/courses/${this.props.match.params.courseId}`)
         })
     }
 
