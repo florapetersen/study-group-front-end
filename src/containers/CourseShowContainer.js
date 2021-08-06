@@ -26,6 +26,9 @@ export default class CourseShowContainer extends Component {
             <h1 className="text-3xl font-bold text-center">
                 {this.state.course.name}
             </h1>
+            <p className="my-2">
+                <Link to={`/courses/${this.state.course.id}/notes/new`}>Share Notes</Link>
+            </p>
         </section>
     }
 }
