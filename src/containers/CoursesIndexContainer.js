@@ -8,7 +8,7 @@ export default class CoursesIndexContainer extends Component {
   }
 
   componentDidMount() {
-      fetch('https://localhost:3001/courses', {
+      fetch('http://localhost:3001/courses', {
           method: 'get',
           headers: {
               'Accept': 'application/json',
